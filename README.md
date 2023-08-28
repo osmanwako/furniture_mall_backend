@@ -1,2 +1,24 @@
-# furniture_mall_backend
-The article explains that building an API with basic knowledge of Ruby on Rails is possible. The tutorial teaches you to configure Rails to work as an API
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
