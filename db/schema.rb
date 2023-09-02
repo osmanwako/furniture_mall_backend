@@ -29,11 +29,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_132617) do
   create_table "furnitures", force: :cascade do |t|
     t.string "name"
     t.string "serial_number"
-    t.string "image"
+    t.string "image", default: "furniture.png"
     t.text "description"
     t.decimal "upfront_price", precision: 10, scale: 2
     t.decimal "total_price", precision: 10, scale: 2
-    t.integer "warranty_year"
+    t.integer "warranty_year", default: 0
+    t.integer "status", default: 0
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

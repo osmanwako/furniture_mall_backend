@@ -39,11 +39,6 @@ class FurnituresController < ApplicationController
   private
 
   def furniture_params
-    current_user = nil
-    if request.headers["Authorization"].present?
-      jwt_payload = JWT.decode(request.headers["Authorization"].split(" ").last, Rails.application.credentials.secret_key_base).first
-      current_user = User.find(jwt_payload["sub"])
-    end
     params.require(:furniture).permit(:name, :serial_number, :image, :description, :upfront_price, :total_price, :warranty_year).merge(user: current_user)
   end
 end
