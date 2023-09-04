@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
-  include ActionController::Cookies
   before_action :authenticate_user!
+  # include ActionController::MimeResponds
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected

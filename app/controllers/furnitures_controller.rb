@@ -1,4 +1,6 @@
 class FurnituresController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @furnitures = Furniture.all
     render json: @furnitures
