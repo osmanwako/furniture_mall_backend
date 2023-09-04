@@ -24,7 +24,6 @@ module FurnitureMallBackend
     config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
-    #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
@@ -35,5 +34,7 @@ module FurnitureMallBackend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_furnituremall_app_session'
   end
 end

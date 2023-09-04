@@ -19,7 +19,6 @@ class Users::SessionsController < Devise::SessionsController
     if request.headers["Authorization"].present?
       jwt_payload = JWT.decode(request.headers["Authorization"].split(" ").last, Rails.application.credentials.secret_key_base).first
       current_user = User.find(jwt_payload["sub"])
-      puts current_user.role
     end
 
     if current_user
